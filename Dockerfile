@@ -1,5 +1,5 @@
 FROM python:3.7-slim
-MAINTAINER Hugo Constantinopolos <hugo.constantinopolos@gruporbs.com.br>
+MAINTAINER Hugo Constantinopolos <hugo.cpolos@gmail.com>
 WORKDIR /opt/data
 
 # Add Files
