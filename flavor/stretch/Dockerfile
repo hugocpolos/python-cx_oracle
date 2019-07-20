@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM python:3.7-stretch
 MAINTAINER Hugo Constantinopolos <hugo.cpolos@gmail.com>
 WORKDIR /opt/data
 
@@ -13,11 +13,9 @@ ENV OCI_LIB_DIR=/opt/oracle/instantclient
 ENV OCI_INCLUDE_DIR=/opt/oracle/instantclient/sdk/include
 ENV NLS_LANG=AMERICAN_AMERICA.AL32UTF8
 
-# INSTALL TOOLS
+# Install Oracle client and tools
 RUN apt-get update \
 	&& apt-get -y install \
-	unzip \
-	gcc \
 	libaio-dev \
 	&& chmod 755 install-instantclient.sh \
 	&& ./install-instantclient.sh \
