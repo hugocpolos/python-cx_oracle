@@ -25,4 +25,4 @@ RUN apt-get update \
 	cx_Oracle==5.3 \
 	&& apt-get remove -y gcc unzip \
 	&& apt-get clean && apt-get autoclean \
-	&& apt-get autoremove && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/data/*
+	&& apt-get autoremove -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/data/*
