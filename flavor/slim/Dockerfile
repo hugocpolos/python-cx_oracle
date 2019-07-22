@@ -23,5 +23,6 @@ RUN apt-get update \
 	&& ./install-instantclient.sh \
 	&& pip install \
 	cx_Oracle==5.3 \
+	&& apt-get remove -y gcc unzip \
 	&& apt-get clean && apt-get autoclean \
 	&& apt-get autoremove && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/data/*
